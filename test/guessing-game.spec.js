@@ -2179,25 +2179,7 @@ describe('#guess', () => {
         expect(result).to.equal(number);
     });
 
-    it('should guess number 274 with max value 3500', () => {
-        const number = 274;
-        const game = new GuessingGame();
-        game.setRange(0, 3500)
 
-        let result = game.guess();
-        game.lower();
-        result = game.guess();
-        game.lower();
-        result = game.guess();
-        game.lower();
-        result = game.guess();
-        game.greater();
-        result = game.guess();
-        game.lower();
-        result = game.guess();
-
-        expect(result).to.equal(number);
-    });
 
     it('should guess number 302 with max value 3879', () => {
         const number = 302;
@@ -3060,6 +3042,25 @@ describe('#guess', () => {
         game.lower();
         result = game.guess();
         game.greater();
+        result = game.guess();
+
+        expect(result).to.equal(number);
+    });
+    it('should guess number 274 with max value 3500', () => {
+        const number = 274;
+        const game = new GuessingGame();
+        game.setRange(0, 3500)
+
+        let result = game.guess();
+        game.lower();
+        result = game.guess();
+        game.lower();
+        result = game.guess();
+        game.lower();
+        result = game.guess();
+        game.greater();
+        result = game.guess();
+        game.lower();
         result = game.guess();
 
         expect(result).to.equal(number);
